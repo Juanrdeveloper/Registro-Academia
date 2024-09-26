@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Jugador - Escuela de Fútbol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Registro de Jugador</h1>
+    <form id="registrationForm">
+        <input type="hidden" id="editIndex" value="">
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required>
+        
+        <label for="tarjeta">Tarjeta de Identidad:</label>
+        <input type="text" id="tarjeta" required pattern="^[0-9]{6,10}$" title="Debe contener entre 6 y 10 dígitos.">
+        
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" required>
+            <option value="">Seleccione una categoría</option>
+            <option value="sub15">Sub 15</option>
+            <option value="sub17">Sub 17</option>
+        </select>
+
+        <label for="matricula">Valor de Matrícula:</label>
+        <input type="number" id="matricula" required min="0" step="0.01">
+
+        <label for="mensualidad">Valor de Mensualidad:</label>
+        <input type="number" id="mensualidad" required min="0" step="0.01">
+
+        <button type="submit">Registrar Jugador</button>
+    </form>
+
+    <h2>Lista de Jugadores Registrados</h2>
+    <ul id="jugadoresList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
