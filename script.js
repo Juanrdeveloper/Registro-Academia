@@ -11,7 +11,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     const matricula = document.getElementById('matricula').value;
     const mensualidad = document.getElementById('mensualidad').value;
 
-    // Validaciones
+    // Validaciones con expresiones regulares
     const tarjetaRegex = /^[0-9]{6,10}$/;
     if (!tarjetaRegex.test(tarjeta)) {
         alert('La tarjeta de identidad debe contener entre 6 y 10 dígitos.');
